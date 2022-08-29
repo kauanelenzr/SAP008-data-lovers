@@ -1,7 +1,7 @@
 /* HEADER */
 body {
     font-family: "Open Sans", sans-serif;
-    background-color: #439be5;
+    background-color: #357FC9;
     font-size: 1rem;
   }
   .wrapper {
@@ -81,7 +81,13 @@ body {
   }
 
   /* MAIN */
-
+  .container-home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 5px;
+  }
 
   /* FOOTER */
   .footer {

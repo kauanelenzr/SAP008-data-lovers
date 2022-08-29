@@ -1,7 +1,7 @@
 /* HEADER */
 body {
   font-family: "Open Sans", sans-serif;
-  background-color: #439be5;
+  background-color: #357FC9;
   font-size: 1rem;
 }
 .wrapper {
@@ -90,7 +90,7 @@ body {
 }
 
 h2 {
-  padding: 5px;
+  padding: 40px;
   text-align: center;
   font-size: 30px;
 }
@@ -103,8 +103,9 @@ h2 {
 .text-about {
   align-items: center;
   text-align: justify;
-  padding: 25px;
-  width: 165vh;
+  padding: 40px;
+  width: 130vh;
+  font-size: 20px;
 }
 
 /* FOOTER */
