@@ -8,4 +8,12 @@ export const filterData = (data, prop, name) => {
   return filter;
 };
 
-
+export const computeStats = (data, key, value) => {
+  let qtd = data.reduce((total, valor) => {
+    if (valor[key] === value) {
+      return total + 1;
+    }
+    return total;
+  }, 0);
+  return Number((qtd * 100 / data.length).toFixed(2));
+}
