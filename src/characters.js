@@ -1,4 +1,4 @@
-import { filterData } from './data.js'
+import { filterData, computeStats } from './data.js'
 import data from './data/ghibli/ghibli.js'
 
 const movies = data.films
@@ -9,7 +9,7 @@ const Persons = (personList, movie) => {
   let charactersCards = ''
   personList.forEach(person => {
     charactersCards +=
-      ` 
+      `
       <div class="flip-card">
       <div class="flip-card-inner">
         <div class="flip-card-front">
@@ -17,7 +17,7 @@ const Persons = (personList, movie) => {
             <img class="image" src="${person.img}" alt="${person.name}"/>
           </div>
           <h1>${person.name}</h1>
-        </div> 
+        </div>
         <div class="flip-card-back">
           <ul class="info">
             <li>Age: ${person.age}</li>
@@ -40,7 +40,7 @@ for (let movie of movies) {
   let personList = movie.people
   Persons(personList, movie.title)
 }
-
+    //tratativa para imagens que estão faltando.
 const imageValidated = () => {
 
   let arrayImages = document.querySelectorAll(".image, .img-back")
@@ -119,3 +119,22 @@ arrayTitles.forEach(title => {
 filterMovie.addEventListener("change", () => {
   generalFilter()
 })
+
+/*
+const genderSelector = document.querySelector('#filter-gender');
+const statistic = document.querySelector('#calculator');
+
+function startPage() {
+  const genderValue = document.querySelector('#filter-gender');
+  const percent = (computeStats(Persons, "gender", "Female"))
+  statistic.innerHTML = createCardStats("Female", percent)
+}
+
+startPage()
+
+function createCardStats(gender, calc) {
+  return `
+          <h2>A porcentagem de personagens do gênero ${gender} é de: ${calc}%</h2>
+          `
+}
+*/
